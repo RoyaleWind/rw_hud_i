@@ -1,0 +1,255 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/animate.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--<script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>-->
+	<script src="./script.js"></script>
+	<script src="./progressbar.js"></script>
+</head>
+
+<body>
+	<div id="wrap" style="display:block">
+		<!-- keybinds -->
+		<div id="left-keybinds">
+			<div id="menu">
+				<div id="menu-icon"></div>
+				<div id="menu-letter">M</div>
+				<span class="tooltiptext">MENU</span>
+			</div>
+			<div id="mobile">
+				<div id="mobile-icon"></div>
+				<div id="mobile-letter">F1</div>
+				<span class="tooltiptext">MOBILE</span>
+			</div>
+			<div id="inventory">
+				<div id="inventory-icon"></div>
+				<div id="inventory-letter">F2</div>
+				<span class="tooltiptext">INVENTORY</span>
+			</div>
+			<div id="job-menu">
+				<div id="job-menu-icon"></div>
+				<div id="job-menu-letter">F6</div>
+				<span class="tooltiptext">JOB USE</span>
+			</div>
+			<div id="character">
+				<div id="character-icon"></div>
+				<div id="character-letter">K</div>
+				<span class="tooltiptext">CHARACTER</span>
+			</div>
+			<div id="chat-key">
+				<div id="chat-key-icon"></div>
+				<div id="chat-key-letter">T</div>
+				<span class="tooltiptext">CHAT</span>
+			</div>
+			 <div id="cursor">
+				 <div id="cursor-icon"></div>
+				 <div id="cursor-letter">F11</div> 
+				<span class="tooltiptext">CURSOR</span> 
+			 </div>
+			
+		</div>
+	
+	
+		<div id="bottom-left-weapon" style="display:block">
+			<div id="weapon-img" style="display:block"></div>
+			<div id="weapon-ammo" style="display:block"><div id="weapon-ammo-icon"></div> <span id='weapon-info'>30/150</span></div>
+			<br/>
+		</div>
+	
+		<!-- LOGO, JOBS & MORE -->
+		<div id="brand">
+			<img src="https://cdn.discordapp.com/attachments/1025742340570226728/1048904692626894859/logo.png" id="logo"/><br/><br/><br>
+			<div id="job-names" style="display:block"><span id="society-name">DEV:ROYALEWIND</span></div>
+			<br/>
+			<span id="id"><i class="fal fa-id-badge"></i> ID: <span id="serverId">420</span></span>
+			<span id="players"><i class="fal fa-users"></i> Players: <span id="player-count">69</span></span>
+			<span id="postal"><i class="fal fa-map-marker-alt"></i> Postal: <span id="postal-id">6942</span></span>
+			<span id="star-coins"><i class="fad fa-star"></i> Donate Coins: <span id="donate-coins">0</span></span>
+			
+			
+		</div>
+
+
+		
+	
+
+		<!-- STATISTICS BARS -->
+		<div class="bars" id="top-right-bars">
+			<table>
+				<tr>
+					<td><div id="healthbar"><div id="healthbar-value">0</div></div></td>
+					<td><div id="vestbar"><div id="vestbar-value">0</div></div></td>
+					<td><div id="hungrybar"></div></td>
+					<td><div id="thirstbar"></div></td>
+				</tr>
+				<tr>
+					<td><div id="staminabar"></div></td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		<div id="cash-bank">
+			<span id="cash"><i class="fal fa-wallet"></i> <span id="money">$0</span></span>
+			<span id="black-money"><i class="fal fa-money-bill-alt"></i> <span id="black_money">$0</span></span>
+			<span id="bank"><i class="fal fa-university"></i> <span id="bank-account">$0</span></span>
+			<span id="society" style="display:none"><i class="fal fa-briefcase"></i> <span id="society-money">$0</span></span>
+		</div>
+
+		<div id="tmda">
+			<span id="tmda-time"><i class="far fa-clock"></i><span id="tmda-time-text">12:00</span></span><br/>
+			<span id="tmda-date"><span id="tmda-date-text">17.7.2022</span></span>
+		</div>
+
+
+			
+
+
+		<!-- BOTTOM RIGHT ALL CORNER -->
+		<div id="bottom-right-corner-wrap">
+			<div id="in-vehicle" style="display:none">
+				<div id="speedometer-wrap">
+					<div class="engine-progress">
+						<div class="engine-barOverflow">
+							<div class="engine-bar"></div>
+						</div>
+						<div class="small-engine-icon"></div>
+						<div class="engine-text"><span class="engine-health">50</span>%</div>
+					</div>
+					
+					<script>
+						$(".engine-progress").each(function() {
+							engineBar = $(this).find(".engine-bar");
+							var $val = $(this).find(".engine-health");
+							var perc = parseInt( $val.text(), 10);
+							
+							engineBar.animate({engineBar:perc}, {
+								duration: 1500,
+								easing: "swing",
+								step: function(p) {
+									engineBar.css({
+										transform: "rotate("+ (53+(p*0.65)) +"deg)", // 100%=180° so: ° = % * 1.8
+										// 45 is to add the needed rotation to have the green borders at the bottom
+									});
+									//$val.text(p|0);
+								}
+							});
+						});
+					</script>
+					
+					<div id="speedometer"></div>
+					
+					<script>
+						speedBar = new ProgressBar.SemiCircle(speedometer, {
+							strokeWidth: 8,
+							color: 'rgba(255,255,255,0.3)',
+							trailColor: 'rgba(255,255,255,0.3)',
+							trailWidth: 8,
+							easing: 'easeInOut',
+							duration: 100,
+							svgStyle: null,
+							text: {
+								value: '',
+								alignToBottom: false
+							},
+							
+							// Set default step function for all animate calls
+							step: (state, bar) => {
+								bar.path.setAttribute('stroke', state.color);
+								var value = Math.round(bar.value() * 450);
+								
+								if (value === 0) {
+									bar.setText('<div id="nospeed">000</div><div id="kmh">MP/H</div>');
+								} 
+								else {
+									bar.setText("<div id='speed'>"+value+"</div><div id='kmh'>MP/H</div>");
+								}
+								
+								bar.text.style.color = state.color;
+							}
+						});
+						
+						speedBar.animate(75 / 400);
+					</script>
+					
+					<div class="fuel-progress">
+						<div class="fuel-barOverflow">
+							<div class="fuel-bar"></div>
+						</div>
+						<span class="fuel-icon"><i class="fas fa-gas-pump"></i></span>
+						<span class="fuel">65</span>
+					</div>
+					
+					<script>
+						$(".fuel-progress").each(function() {
+							fuelBar = $(this).find(".fuel-bar");
+							var $val = $(this).find(".fuel");
+							var perc = parseInt( $val.text(), 10);
+			
+							if (perc > 54) {
+								document.querySelector('.fuel-icon').style.color = 'rgba(145,220,35,1)';
+								document.querySelector('.fuel-bar').style.borderBottom = '0.5vw solid rgba(145,220,35,1)';
+								document.querySelector('.fuel-bar').style.borderRight = '0.5vw solid rgba(145,220,35,1)';
+							} 
+							else if (perc > 40) {
+								document.querySelector('.fuel-icon').style.color = 'rgba(255,225,30,1)';
+								document.querySelector('.fuel-bar').style.borderBottom = '0.5vw solid rgba(255,225,30,1)';
+								document.querySelector('.fuel-bar').style.borderRight = '0.5vw solid rgba(255,225,30,1)';
+							}
+			
+							else if (perc > 20) {
+								document.querySelector('.fuel-icon').style.color = 'rgba(255,135,35,1)';
+								document.querySelector('.fuel-bar').style.borderBottom = '0.5vw solid rgba(255,135,35,1)';
+								document.querySelector('.fuel-bar').style.borderRight = '0.5vw solid rgba(255,135,35,1)';
+							}
+			
+							else {
+								document.querySelector('.fuel-icon').style.color = 'rgba(255,35,35,1)';
+								document.querySelector('.fuel-bar').style.borderBottom = '0.5vw solid rgba(255,35,35,1)';
+								document.querySelector('.fuel-bar').style.borderRight = '0.5vw solid rgba(255,35,35,1)';
+							}
+			
+							fuelBar.animate({fuelBar:perc}, {
+								duration: 1500,
+								easing: "swing",
+								step: function(p) {
+									fuelBar.css({
+										transform: "rotate("+ (41+(p*0.9)) +"deg)", // 100%=180° so: ° = % * 1.8
+										// 45 is to add the needed rotation to have the green borders at the bottom
+									});
+								}
+							});
+						});
+					</script>
+				</div>
+				
+				<div id="vehicle-keybindings" style="display:block">
+					<table class="vehicle-table">
+						<tr>
+							<td><center><div id="carkey-icon-off"></div></center></td>
+							<td><center><div id="engine-icon-off"></div></center></td>
+							<td><center><div id="car-options-icon-off"></div></center></td>
+						</tr>
+						<tr>
+							<td><center><div id="carkey-letter">B</div></center></td>
+							<td><center><div id="engine-letter">TAB</div></center></td>
+							<td><center><div id="car-options-letter">Y</div></center></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		
+		
+		
+		
+	</div>
+</body>
+</html>

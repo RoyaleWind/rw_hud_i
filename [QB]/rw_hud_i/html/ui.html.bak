@@ -1,0 +1,295 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/animate.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--<script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>-->
+	<script src="script.js"></script>
+	<script src="./progressbar.js"></script>
+</head>
+
+<body>
+	<div id="wrap" style="display:block">
+		<!-- LEFTSIDE -->
+		<div id="left-keybinds">
+			<!--<div id="mic-active">
+				<div id="mic-icon"></div>
+				<div id="mic-letter">N</div>
+				<span class="tooltiptext">MICROPHONE</span>
+				<div id="voice-mode" class="mic-distance">
+					<div class="mic-distance-bar mic-normal"></div>
+					<div class="mic-distance-bar mic-normal"></div>
+					<div class="mic-distance-bar"></div>
+					<div class="mic-distance-text">NORMAL</div>
+				</div>
+			</div>-->
+			<div id="menu">
+				<div id="menu-icon"></div>
+				<div id="menu-letter">M</div>
+				<span class="tooltiptext">MENU</span>
+			</div>
+			<div id="mobile">
+				<div id="mobile-icon"></div>
+				<div id="mobile-letter">F1</div>
+				<span class="tooltiptext">MOBILE</span>
+			</div>
+			<div id="inventory">
+				<div id="inventory-icon"></div>
+				<div id="inventory-letter">F2</div>
+				<span class="tooltiptext">INVENTORY</span>
+			</div>
+			<!--<div id="interaction">
+				<div id="interaction-icon"></div>
+				<div id="interaction-letter">TAB</div>
+				<span class="tooltiptext">INTERACT</span>
+			</div>-->
+			<!--<div id="job-menu">
+				<div id="job-menu-icon"></div>
+				<div id="job-menu-letter">F9</div>
+				<span class="tooltiptext">JOB MENU</span>
+			</div>-->
+			<div id="character">
+				<div id="character-icon"></div>
+				<div id="character-letter">K</div>
+				<span class="tooltiptext">CHARACTER</span>
+			</div>
+			<div id="chat-key">
+				<div id="chat-key-icon"></div>
+				<div id="chat-key-letter">T</div>
+				<span class="tooltiptext">CHAT</span>
+			</div>
+			<!-- <div id="cursor"> -->
+				<!-- <div id="cursor-icon"></div> -->
+				<!-- <div id="cursor-letter">F11</div> -->
+				<!-- <span class="tooltiptext">CURSOR</span> -->
+			<!-- </div> -->
+			
+		</div>
+	
+		<div id="bottom-left-weapon" style="display:block">
+			<div id="weapon-img" style="display:none"></div>
+			<div id="weapon-ammo" style="display:block"><div id="weapon-ammo-icon"></div> <span id='weapon-info'>30/150</span></div>
+		</div>
+	
+		<!-- LOGO, JOBS & MORE -->
+		<div id="brand">
+			<!--<img src="https://cdn.discordapp.com/attachments/957371483515154462/961615985503256606/efxaristw_to_arena_gia_to_template_symbolo_kardias.png?size=4096" id="logo"/>-->
+			<img src="../html/images/RP.gif" id="logo"/><br/><br/><br>
+			<span id="id"><i class="fal fa-id-badge"></i> ID: <span id="serverId">420</span></span>
+			<span id="players"><i class="fal fa-users"></i> Players: <span id="player-count">69</span></span>
+			<span id="postal"><i class="fal fa-map-marker-alt"></i> Postal: <span id="postal-id">6942</span></span>
+			<!--<span id="star-coins"><i class="fad fa-star"></i> Star Coins: <span id="donate-coins">0</span></span>-->
+			<div id="job-names" style="display:block"><span id="society-name">RoyaleWind</span><span id="society2-name">/changejob</span></div>
+		</div>
+
+		<!-- STATISTICS BARS -->
+		<div class="bars" id="top-right-bars">
+			<table>
+				<tr>
+					<td><div id="healthbar"><div id="healthbar-value">0</div></div></td>
+					<td><div id="vestbar"><div id="vestbar-value">0</div></div></td>
+					<td><div id="hungrybar"></div></td>
+					<td><div id="thirstbar"></div></td>
+				</tr>
+				<tr>
+					<td><div id="staminabar"></div></td>
+					<td><div id="sprintbar"></div></td>
+					<td><div id="strengthbar"></div></td>
+				<!--<td><div id="cocainebar"></div></td>
+					<td><div id="weedbar"></div></td>-->
+				</tr>
+			</table>
+		</div>
+		
+		
+		<div id="cash-bank">
+			<span id="cash">$<span id="money">0</span> <i class="fal fa-wallet"></i></span><br/>
+			<span id="bank">$<span id="bank-account">0</span> <i class="fal fa-university"></i></span><br/>
+			<span id="black-money">$<span id="black_money">0</span> <i class="fal fa-sack-dollar"></i></span><br/>
+			<span id="society" style="display:block">$<span id="society-money">0</span> <i class="fal fa-briefcase"></i></span>
+		</div>
+		
+		
+			<!-- TO fix -->
+		<div id="neutralzone" style="display:none">
+			<div id="icon"></div>
+			<div id="title">NEUTRAL</div>
+			<div id="text">ZONE</div>
+		</div>
+		
+		<div id="nlrzone" style="display:none">
+			<div id="icon"></div>
+			<div id="title">DANGER</div>
+			<div id="text">ZONE</div>
+		</div>
+		
+		<div id="redzone" style="display:none">
+			<div id="icon"></div>
+			<div id="title">RED</div>
+			<div id="text">ZONE</div>
+		</div>
+		
+		<div id="greenzone" style="display:none">
+			<div id="icon"></div>
+			<div id="title">GREEN</div>
+			<div id="text">ZONE</div>
+		</div>
+		
+		<div id="vip-subscription" style="display:none">
+			<span>VIP</span> SUBSCRIPTION
+		</div>
+		<div id="vip-expire" style="display:none">15/04</div>
+
+
+		<!-- BOTTOM RIGHT ALL CORNER -->
+		<div id="bottom-right-corner-wrap">
+			<div id="in-vehicle" style="display:none">
+				<div id="speedometer-wrap">
+					<!-- ENGINE HEALTH -->
+					<div class="engine-progress">
+						<div class="engine-barOverflow">
+						<div class="engine-bar"></div>
+						</div>
+						<div class="small-engine-icon"></div>
+						<div class="engine-text"><span class="engine-health">87</span>%</div>
+					</div>
+					
+					<script>
+					$(".engine-progress").each(function(){
+	
+						var $bar = $(this).find(".engine-bar");
+						var $val = $(this).find(".engine-health");
+						var perc = parseInt( $val.text(), 10);
+
+						$({p:0}).animate({p:perc}, {
+						duration: 1500,
+						easing: "swing",
+						step: function(p) {
+							$bar.css({
+							transform: "rotate("+ (53+(p*0.65)) +"deg)", // 100%=180° so: ° = % * 1.8
+							// 45 is to add the needed rotation to have the green borders at the bottom
+							});
+							$val.text(p|0);
+						}
+						});
+					});
+					</script>
+									
+					<!-- SPEEDOMETER -->
+					<div id="speedometer"></div>
+					<script>
+						var bar = new ProgressBar.SemiCircle(speedometer, {
+							strokeWidth: 4,
+							color: 'rgba(255,255,255,0.3)',
+							trailColor: 'rgba(255,255,255,0.3)',
+							trailWidth: 4,
+							easing: 'easeInOut',
+							duration: 2000,
+							svgStyle: null,
+							text: {
+							value: '',
+							alignToBottom: false
+							},
+							
+							// Set default step function for all animate calls
+							step: (state, bar) => {
+							bar.path.setAttribute('stroke', state.color);
+							var value = Math.round(bar.value() * 300);
+							if (value === 0) {
+								bar.setText('<div id="nospeed">000</div><div id="kmh">KM/H</div>');
+							} 
+							else {
+								bar.setText("<div id='speed'>"+value+"</div><div id='kmh'>KM/H</div>");
+							}
+
+							bar.text.style.color = state.color;
+							}
+						});
+						
+
+						bar.animate(75 / 300);  
+					</script>
+					
+					<!-- FUEL -->
+					<div class="fuel-progress">
+						<div class="fuel-barOverflow">
+						<div class="fuel-bar"></div>
+						</div>
+						<span class="fuel-icon"><i class="fas fa-gas-pump"></i></span>
+						<span class="fuel">65</span>
+					</div>
+					
+					<script>
+						$(".fuel-progress").each(function(){
+							
+						var $bar = $(this).find(".fuel-bar");
+						var $val = $(this).find(".fuel");
+						var perc = parseInt( $val.text(), 10);
+							
+						if (perc > 54) {
+							document.querySelector('.fuel-icon').style.color = 'rgba(145,220,35,1)';
+							document.querySelector('.fuel-bar').style.borderBottom = '0.5vw solid rgba(145,220,35,1)';
+							document.querySelector('.fuel-bar').style.borderRight = '0.5vw solid rgba(145,220,35,1)';
+						} 
+						else if (perc > 40) {
+							document.querySelector('.fuel-icon').style.color = 'rgba(255,225,30,1)';
+							document.querySelector('.fuel-bar').style.borderBottom = '0.5vw solid rgba(255,225,30,1)';
+							document.querySelector('.fuel-bar').style.borderRight = '0.5vw solid rgba(255,225,30,1)';
+						}
+						
+						else if (perc > 20) {
+							document.querySelector('.fuel-icon').style.color = 'rgba(255,135,35,1)';
+							document.querySelector('.fuel-bar').style.borderBottom = '0.5vw solid rgba(255,135,35,1)';
+							document.querySelector('.fuel-bar').style.borderRight = '0.5vw solid rgba(255,135,35,1)';
+						}
+						
+						else {
+							document.querySelector('.fuel-icon').style.color = 'rgba(255,35,35,1)';
+							document.querySelector('.fuel-bar').style.borderBottom = '0.5vw solid rgba(255,35,35,1)';
+							document.querySelector('.fuel-bar').style.borderRight = '0.5vw solid rgba(255,35,35,1)';
+						}
+
+						$({p:0}).animate({p:perc}, {
+							duration: 1500,
+							easing: "swing",
+							step: function(p) {
+								$bar.css({
+								transform: "rotate("+ (41+(p*0.9)) +"deg)", // 100%=180° so: ° = % * 1.8
+								// 45 is to add the needed rotation to have the green borders at the bottom
+								});
+								$val.text(p|0);
+							}
+							});
+						});
+					</script>
+				</div>
+				
+				<div id="vehicle-keybindings" style="display:block">
+					<table class="vehicle-table">
+						<tr>
+							<td><center><div id="carkey-icon-off"></div></center></td>
+							<td><center><div id="engine-icon-off"></div></center></td>
+							<td><center><div id="car-options-icon-off"></div></center></td>
+						</tr>
+						<tr>
+							<td><center><div id="carkey-letter">B</div></center></td>
+							<td><center><div id="engine-letter">TAB</div></center></td>
+							<td><center><div id="car-options-letter">Y</div></center></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		
+		
+		
+		
+	</div>
+</body>
+</html>
