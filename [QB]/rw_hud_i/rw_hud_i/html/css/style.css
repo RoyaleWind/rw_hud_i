@@ -1,0 +1,1485 @@
+:root {
+    --primary-color: #ffd900;
+	--stat-color: #ffe600;
+	--job-clor:#ffd000;
+	--secondary-color:#ffffff;
+}
+
+@font-face {
+	font-family: "Bebas Nue";
+	src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+	font-family: "Bebas Nue";
+	src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+  font-weight: 100;
+  }
+  
+  @font-face {
+	font-family: "Bebas Nue";
+	src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+  font-weight: 200;
+  }
+  
+  @font-face {
+	font-family: "Bebas Nue";
+	src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+  font-weight: 300;
+  }
+  
+  @font-face {
+	font-family: "Bebas Nue";
+	src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+  font-style: italic;
+  }
+  
+  @font-face {
+	font-family: "Bebas Nue";
+	src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+	font-weight: bold;
+  }
+  
+  @font-face {
+	font-family: 'Myriad Pro';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-SEMIBOLD.woff') format('woff');
+  }
+  
+  @font-face {
+	font-family: 'Myriad Pro Cond';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+  }
+  
+  
+
+html {
+	background:transparent;
+	overflow: hidden; 
+}
+
+body {
+    /* background:  url('../images/background.png') bottom center no-repeat, url('https://images.hdqwalls.com/download/gta-v-ferrari-8k-4x-1920x1080.jpg') bottom center no-repeat; */
+    background: url('https://img2.goodfon.com/original/1920x1080/c/ba/gta-5-los-santos-rokstar-gorod.jpg');
+	background: transparent;
+	/* background-color: #171717; */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	z-index:9999;
+
+}
+
+#wrap {	
+	font-family:'Bebas Nue', 'Myriad Pro Cond';
+	display:block;
+	top: 50%;
+	left:50%;
+	width: 100%;
+	height: 96%;
+    transform: translate(-50%, -50%);
+	position:absolute;
+	color: rgba(255, 255, 255, 1);
+}
+
+
+/* -- LEFT KEYBINDS -- */
+
+#left-keybinds {
+  font-size: 1vw;
+  vertical-align: top;
+  transition: 0.2s;
+  top: 21.5vw;
+  left: 1vw;
+  position: absolute;
+}
+
+/* -- MOBILE -- */
+
+#mobile {
+	font-size:1.2vw;
+	color: #fff;
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.5);
+	text-align:center;
+	margin:0 auto;
+	height:2.5vw;
+	width:5vw;
+	letter-spacing:0.05vw;
+	cursor:pointer;
+}
+
+#mobile .tooltiptext {
+  visibility: hidden;
+  background:rgba(50,255,220,1);
+  color: rgba(0,0,0,1);
+  text-align: center;
+  border-radius: 0.2vw;
+  padding: 0.2vw 0.7vw;
+  position: relative;
+  font-size:0.8vw;
+  font-weight:600;
+  z-index: 1;
+  top: -1.35vw;
+  left: 70%;
+}
+
+#mobile .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -0.3vw;
+  border-width: 0.3vw;
+  border-style: solid;
+  border-color: transparent rgba(50,255,220,1) transparent transparent;
+}
+
+#mobile:hover .tooltiptext {
+  visibility: visible;
+}
+
+#mobile-letter {
+	width:1.5vw;
+	height:1.5vw;
+	font-size:0.9vw;
+	line-height:1.2vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	border:solid 0.15vw rgba(255,255,255,0.3);
+	float:left;
+	border-radius: 15%;
+	
+	
+}
+
+#mobile-icon {
+	background:  url('../images/icons/icon-mobile.png') center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	width:1.5vw;
+	height:1.5vw;
+	margin-right:0.4vw;
+	color:rgba(255,255,255,0.6);
+	float:left;
+	opacity:1;
+}
+
+/* -- INVENTORY -- */
+
+#inventory {
+	font-size:1.2vw;
+	color: #fff;
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.5);
+	text-align:center;
+	margin:0 auto;
+	height:2.5vw;
+	width:5vw;
+	letter-spacing:0.05vw;
+	cursor:pointer;
+}
+
+#inventory .tooltiptext {
+  visibility: hidden;
+  background:rgba(50,255,220,1);
+  color: rgba(0,0,0,1);
+  text-align: center;
+  border-radius: 0.2vw;
+  padding: 0.2vw 0.7vw;
+  position: relative;
+  font-size:0.8vw;
+  font-weight:600;
+  z-index: 1;
+  top: -1.35vw;
+  left: 80%;
+}
+
+#inventory .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -0.3vw;
+  border-width: 0.3vw;
+  border-style: solid;
+  border-color: transparent rgba(50,255,220,1) transparent transparent;
+}
+
+#inventory:hover .tooltiptext {
+  visibility: visible;
+}
+
+#inventory-letter {
+	width:1.5vw;
+	height:1.5vw;
+	font-size:0.9vw;
+	line-height:1.2vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	border:solid 0.15vw rgba(255,255,255,0.3);
+	float:left;
+	border-radius: 15%;
+}
+
+#inventory-icon {
+	background:  url('../images/icons/icon-inventory.png') center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	width:1.5vw;
+	height:1.5vw;
+	margin-right:0.4vw;
+	color:rgba(255,255,255,0.6);
+	float:left;
+	opacity:1;
+}
+
+/* -- INTERACTION -- */
+
+#interaction {
+	font-size:1.2vw;
+	color: #fff;
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.5);
+	text-align:center;
+	margin:0 auto;
+	height:2.5vw;
+	width:5vw;
+	letter-spacing:0.05vw;
+	cursor:pointer;
+}
+
+#interaction .tooltiptext {
+  visibility: hidden;
+  background:rgba(50,255,220,1);
+  color: rgba(0,0,0,1);
+  text-align: center;
+  border-radius: 0.2vw;
+  padding: 0.2vw 0.7vw;
+  position: relative;
+  font-size:0.8vw;
+  font-weight:600;
+  z-index: 1;
+  top: -1.35vw;
+  left: 80%;
+}
+
+#interaction .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -0.3vw;
+  border-width: 0.3vw;
+  border-style: solid;
+  border-color: transparent rgba(50,255,220,1) transparent transparent;
+}
+
+#interaction:hover .tooltiptext {
+  visibility: visible;
+}
+
+#interaction-letter {
+	width:1.5vw;
+	height:1.5vw;
+	font-size:0.75vw;
+	line-height:1.25vw;
+	padding-left:0.05vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	border:solid 0.15vw rgba(255,255,255,0.3);
+	float:left;
+	border-radius: 15%;
+}
+
+#interaction-icon {
+	background:  url('../images/icons/icon-interact.png') center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	width:1.5vw;
+	height:1.5vw;
+	margin-right:0.4vw;
+	color:rgba(255,255,255,0.6);
+	float:left;
+	opacity:1;
+}
+
+/* -- INTERACTION -- */
+
+#job-menu {
+	font-size:1.2vw;
+	color: #fff;
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.5);
+	text-align:center;
+	margin:0 auto;
+	height:2.5vw;
+	width:5vw;
+	letter-spacing:0.05vw;
+	cursor:pointer;
+}
+
+#job-menu .tooltiptext {
+  visibility: hidden;
+  background:rgba(50,255,220,1);
+  color: rgba(0,0,0,1);
+  text-align: center;
+  border-radius: 0.2vw;
+  padding: 0.2vw 0.7vw;
+  position: relative;
+  font-size:0.8vw;
+  font-weight:600;
+  z-index: 1;
+  top: -1.35vw;
+  left: 80%;
+}
+
+#job-menu .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -0.3vw;
+  border-width: 0.3vw;
+  border-style: solid;
+  border-color: transparent rgba(50,255,220,1) transparent transparent;
+}
+
+#job-menu:hover .tooltiptext {
+  visibility: visible;
+}
+
+#job-menu-letter {
+	width:1.5vw;
+	height:1.5vw;
+	font-size:0.9vw;
+	line-height:1.2vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	border:solid 0.15vw rgba(255,255,255,0.3);
+	float:left;
+	border-radius: 15%;
+}
+
+#job-menu-icon {
+	background:  url('../images/icons/icon-job-menu.png') center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	width:1.5vw;
+	height:1.5vw;
+	margin-right:0.4vw;
+	color:rgba(255,255,255,0.6);
+	float:left;
+	opacity:1;
+}
+
+/* -- menu -- */
+
+#menu {
+	font-size:1.2vw;
+	color: #fff;
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.5);
+	text-align:center;
+	margin:0 auto;
+	height:2.5vw;
+	width:5vw;
+	letter-spacing:0.05vw;
+	cursor:pointer;
+}
+
+#menu .tooltiptext {
+  visibility: hidden;
+  background:rgba(50,255,220,1);
+  color: rgba(0,0,0,1);
+  text-align: center;
+  border-radius: 0.2vw;
+  padding: 0.2vw 0.7vw;
+  position: relative;
+  font-size:0.8vw;
+  font-weight:600;
+  z-index: 1;
+  top: -1.35vw;
+  left: 65%;
+}
+
+#menu .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -0.3vw;
+  border-width: 0.3vw;
+  border-style: solid;
+  border-color: transparent rgba(50,255,220,1) transparent transparent;
+}
+
+#menu:hover .tooltiptext {
+  visibility: visible;
+}
+
+#menu-letter {
+	width:1.5vw;
+	height:1.5vw;
+	font-size:0.9vw;
+	line-height:1.2vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	border:solid 0.15vw rgba(255,255,255,0.3);
+	float:left;
+	border-radius: 15%;
+}
+
+#menu-icon {
+	background:  url('../images/icons/icon-main-menu.png') center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	width:1.5vw;
+	height:1.5vw;
+	margin-right:0.4vw;
+	color:rgba(255,255,255,0.6);
+	float:left;
+	opacity:1;
+}
+
+/* -- CHARACTER -- */
+
+#character {
+	font-size:1.2vw;
+	color: #fff;
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.5);
+	text-align:center;
+	margin:0 auto;
+	height:2.5vw;
+	width:5vw;
+	letter-spacing:0.05vw;
+	cursor:pointer;
+}
+
+#character .tooltiptext {
+  visibility: hidden;
+  background:rgba(50,255,220,1);
+  color: rgba(0,0,0,1);
+  text-align: center;
+  border-radius: 0.2vw;
+  padding: 0.2vw 0.7vw;
+  position: relative;
+  font-size:0.8vw;
+  font-weight:600;
+  z-index: 1;
+  top: -1.35vw;
+  left: 85%;
+}
+
+#character .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -0.3vw;
+  border-width: 0.3vw;
+  border-style: solid;
+  border-color: transparent rgba(50,255,220,1) transparent transparent;
+}
+
+#character:hover .tooltiptext {
+  visibility: visible;
+}
+
+#character-letter {
+	width:1.5vw;
+	height:1.5vw;
+	font-size:0.9vw;
+	line-height:1.2vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	border:solid 0.15vw rgba(255,255,255,0.3);
+	float:left;
+	border-radius: 15%;
+}
+
+#character-icon {
+	background:  url('../images/icons/icon-character.png') center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	width:1.5vw;
+	height:1.5vw;
+	margin-right:0.4vw;
+	color:rgba(255,255,255,0.6);
+	float:left;
+	opacity:1;
+}
+
+/* -- CHAT KEY -- */
+
+#chat-key {
+	font-size:1.2vw;
+	color: #fff;
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.5);
+	text-align:center;
+	margin:0 auto;
+	height:2.5vw;
+	width:5vw;
+	letter-spacing:0.05vw;
+	cursor:pointer;
+}
+
+#chat-key .tooltiptext {
+  visibility: hidden;
+   background:rgba(50,255,220,1);
+  color: rgba(0,0,0,1);
+  text-align: center;
+  border-radius: 0.2vw;
+  padding: 0.2vw 0.7vw;
+  position: relative;
+  font-size:0.8vw;
+  font-weight:600;
+  z-index: 1;
+  top: -1.35vw;
+  left: 70%;
+}
+
+#chat-key .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -0.3vw;
+  border-width: 0.3vw;
+  border-style: solid;
+  border-color: transparent rgba(50,255,220,1) transparent transparent;
+}
+
+#chat-key:hover .tooltiptext {
+  visibility: visible;
+}
+
+#chat-key-letter {
+	width:1.5vw;
+	height:1.5vw;
+	font-size:0.9vw;
+	line-height:1.2vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	border:solid 0.15vw rgba(255,255,255,0.3);
+	float:left;
+	border-radius: 15%;
+}
+
+#chat-key-icon {
+	background:  url('../images/icons/icon-chat-key.png') center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	width:1.5vw;
+	height:1.5vw;
+	margin-right:0.4vw;
+	color:rgba(255,255,255,0.6);
+	float:left;
+	opacity:1;
+}
+
+/* -- CURSOR -- */
+#cursor {
+	font-size:1.2vw;
+	color: #fff;
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.5);
+	text-align:center;
+	margin:0 auto;
+	height:2.5vw;
+	width:5vw;
+	letter-spacing:0.05vw;
+	cursor:pointer;
+}
+
+#cursor .tooltiptext {
+  visibility: hidden;
+  background:rgba(50,255,220,1);
+  color: rgba(0,0,0,1);
+  text-align: center;
+  border-radius: 0.2vw;
+  padding: 0.2vw 0.7vw;
+  position: relative;
+  font-size:0.8vw;
+  font-weight:600;
+  z-index: 1;
+  top: -1.35vw;
+  left: 70%;
+}
+
+#cursor .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -0.3vw;
+  border-width: 0.3vw;
+  border-style: solid;
+  border-color: transparent rgba(50,255,220,1) transparent transparent;
+}
+
+#cursor:hover .tooltiptext {
+  visibility: visible;
+}
+
+#cursor-letter {
+	width:1.5vw;
+	height:1.5vw;
+	font-size:0.9vw;
+	line-height:1.2vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	border:solid 0.15vw rgba(255,255,255,0.3);
+	float:left;
+	border-radius: 15%;
+}
+
+#cursor-icon {
+	background:  url('../images/icons/icon-cursor.png') center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	width:1.5vw;
+	height:1.5vw;
+	margin-right:0.4vw;
+	color:rgba(255,255,255,0.6);
+	float:left;
+	opacity:1;
+}
+
+/* -- BOTTOM LEFT BARS -- */
+
+#top-right-bars {
+	font-size:1vw;
+	vertical-align: top;
+	transition:0.2s;
+	top:55%;
+	right:0vw;
+	position:absolute;
+	text-align:left;
+	display:flex;
+	transform:translate(0,-50%);
+}
+
+#bottom-left-bars {
+	font-size:1vw;
+	vertical-align: top;
+	transition:0.2s;
+	bottom:12.5vw;
+	left:1.8vw;
+	position:absolute;
+	text-align:left;
+	display:flex;
+}
+
+#bottom-center-bars table{
+
+}
+
+
+#bottom-center-bars table tr {
+	display:inline;
+}
+
+#top-right-bars table{
+    margin-right:1vw;
+
+}
+
+#top-right-bars table tr {
+	display:grid;
+}
+
+#top-right-bars table td {
+	padding-bottom:1vw;
+}
+
+
+
+#healthbar {
+  width: 2.5vw;
+  height: 2.5vw;
+  margin:0.2vw;
+}
+
+#healthbar-icon {
+	font-size:1.1vw;
+	padding-top:0.15vw;
+	text-align:center;
+	color:var(--secondary-color);
+}
+
+#healthbar-icon img {
+	width:1.1vw;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	filter: drop-shadow(0 0 0.1vw rgba(0,0,0,0));
+	position:absolute;
+}
+
+#healthbar svg {
+	height: 100%;
+	width: 100%;
+	fill: none;
+	stroke: rgb(255, 50, 50);
+	filter: drop-shadow(0 0 1.5vw rgb(255, 0, 0));
+	stroke-width: 10;
+	border-radius:0.2vw;
+	transform:rotate(-45deg);
+	border:none;
+	box-shadow:0 0 0.2vw rgba(0,0,0,0);
+}
+
+#healthbar-value {
+	opacity: 0;
+	position:absolute;
+	width:100%;
+	text-align:center;
+	font-size:0.8vw;
+	color: var(--stat-color);
+	font-weight: bold;
+}
+/* --------------------------------- */
+#vestbar {
+	width: 2.5vw;
+	height: 2.5vw;
+	margin:0.2vw;
+}
+
+#vestbar-icon {
+	font-size:1.1vw;
+	padding-top:0.15vw;
+	text-align:center;
+	color:var(--secondary-color);
+}
+
+#vestbar-icon img {
+	width:1.1vw;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	filter: drop-shadow(0 0 0.1vw rgba(0,0,0,0));
+	position:absolute;
+}
+
+#vestbar svg {
+	height: 100%;
+	width: 100%;
+	fill: none;
+	stroke: rgb(174, 0, 255);
+	filter: drop-shadow(0 0 1.5vw rgba(255, 0, 255, 0.993));
+	stroke-width: 10;
+	border-radius:0.2vw;
+	transform:rotate(-45deg);
+	border:none;
+	box-shadow:0 0 0.2vw rgba(0,0,0,0);
+}
+
+#vestbar-value {
+	opacity: 0;
+	position:absolute;
+	width:100%;
+	text-align:center;
+	font-size:0.8vw;
+	color: var(--stat-color);
+	font-weight: bold;
+}
+/* --------------------------------- */
+
+
+#hungrybar {
+  width: 2.5vw;
+  height: 2.5vw;
+  margin:0.2vw;
+}
+
+#hungrybar-icon {
+	font-size:1.1vw;
+	padding-top:0.15vw;
+	text-align:center;
+	color:var(--secondary-color);
+}
+
+#hungrybar-icon img {
+	width:1.1vw;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	filter: drop-shadow(0 0 0.1vw rgba(0,0,0,0));
+	position:absolute;
+}
+
+#hungrybar svg {
+	height: 100%;
+	width: 100%;
+	fill: none;
+	stroke: rgb(255, 145, 0);
+	filter: drop-shadow(0 0 1.5vw rgba(255, 145, 0));
+	stroke-width: 10;
+	border-radius:0.2vw;
+	transform:rotate(-45deg);
+	border:none;
+	box-shadow:0 0 0.2vw rgba(0,0,0,0);
+}
+/* --------------------------------- */
+#thirstbar {
+  width: 2.5vw;
+  height: 2.5vw;
+  margin:0.2vw;
+}
+
+#thirstbar-icon {
+	font-size:1.1vw;
+	padding-top:0.15vw;
+	text-align:center;
+	color:var(--secondary-color);
+}
+
+#thirstbar-icon img {
+	width:1.1vw;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	filter: drop-shadow(0 0 0.1vw rgba(0,0,0,0));
+	position:absolute;
+}
+
+#thirstbar svg {
+	height: 100%;
+	width: 100%;
+	fill: none;
+	stroke: rgb(0, 238, 255);
+	filter: drop-shadow(0 0 1.5vw rgb(0, 255, 234));
+	stroke-width: 10;
+	border-radius:0.2vw;
+	transform:rotate(-45deg);
+	border:none;
+	box-shadow:0 0 0.2vw rgba(0,0,0,0);
+}
+/* --------------------------------- */
+#staminabar {
+	width: 2.5vw;
+	height: 2.5vw;
+	margin:0.2vw;
+}
+
+#staminabar-icon {
+	font-size:1.1vw;
+	padding-top:0.15vw;
+	text-align:center;
+	color:var(--secondary-color);
+}
+
+#staminabar-icon img {
+	width:1.1vw;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	filter: drop-shadow(0 0 0.1vw rgba(0,0,0,0));
+	position:absolute;
+}
+
+#staminabar svg {
+	height: 100%;
+	width: 100%;
+	fill: none;
+	stroke: rgb(238, 255, 0);
+	filter: drop-shadow(0 0 1.5vw rgb(238, 255, 0));
+	stroke-width: 10;
+	border-radius:0.2vw;
+	transform:rotate(-45deg);
+	border:none;
+	box-shadow:0 0 0.2vw rgba(0,0,0,0);
+}
+/* --------------------------------- */
+
+/* -- BRAND & INFO -- */
+
+#brand {
+	font-size:1vw;
+	vertical-align: top;
+	transition:0.2s;
+	top:0;
+	right:-1vw;
+	position:absolute;
+	color: var(--secondary-color);
+	text-align:right;
+	transform:scale(0.9);
+}
+
+#logo {
+    height: 6vh;
+	float:right;
+	margin-right: 3vh;
+	image-rendering:pixelate;
+}
+
+/* -- INFORMATION -- */
+
+#other-info {
+	font-size:1vw;
+	vertical-align: top;
+	transition:0.2s;
+	top:11vw;
+	right:0vw;
+	position:absolute;
+	color: #fff;
+	text-align:right;
+	transform:scale(0.9);
+}
+
+#players {
+	font-size:1vw;
+	line-height:1.6vw;
+	font-weight:400;
+	letter-spacing:0.05vw;
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.6);
+	border-right:0.1vw solid rgba(255,255,255,0.8);
+	padding-right:0.5vw;
+	margin-right:0.2vw;
+}
+
+#postal {
+	font-size:1vw;
+	line-height:1.6vw;
+	font-weight:400;
+	letter-spacing:0.05vw;
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.6);
+	border-right:0.1vw solid rgba(255,255,255,0.8);
+	padding-right:0.5vw;
+	margin-right:0.2vw;
+	
+}
+
+#id {
+	font-size:1vw;
+	line-height:1.6vw;
+	font-weight:400;
+	letter-spacing:0.05vw;
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.6);
+	border-right:0.1vw solid rgba(255,255,255,0.8);
+	padding-right:0.5vw;
+	margin-right:0.2vw;
+}
+
+#star-coins {
+	font-size:1vw;
+	line-height:1.6vw;
+	font-weight:400;
+	letter-spacing:0.05vw;
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.6);
+	margin-right:1vw;
+}
+
+#star-coins span, #players span, #postal span, #id span {
+	color:var(--primary-color);
+
+}
+
+#job-names{
+	width:35vw;
+	font-size:1.25vw;
+	line-height:1.6vw;
+	font-weight:400;
+	top:4.5vw;
+	right:1vw;
+	text-align:right;
+	position:absolute;
+}
+
+#society-name {
+	color: var(--job-clor);
+	text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.6);
+	padding-right:0.0vw;
+	margin-right:0.0vw;
+
+}
+
+
+
+/* -- BOTTOM LEFT WEAPON -- */
+
+#bottom-left-weapon {
+	background-color: 	rgba(0,0,0,0.3);
+	border-radius: 10px;
+	font-size:1vw;
+	vertical-align: top;
+	transition:0.2s;
+	bottom:-1.5vw;
+	left:17vw;
+	position:absolute;
+	filter:drop-shadow(0 0 0.5vw var(--primary-color));
+	text-align:left;
+}
+
+#weapon-img {
+	background:  url('../images/icons/WEAPON_CARBINERIFLE.png') center center no-repeat;
+	background-size: cover; 
+	width:5vw;
+	height:2.5vw;
+	transform:rotate(0deg);
+	margin-bottom:1vw;
+	z-index:-0.2vw;
+	position:relative;
+	top:0px;
+}
+
+#weapon-ammo-icon {
+	background:  url('../images/icons/icon-ammo.png') center center no-repeat;
+	background-size: cover; 
+	width:1.4vw;
+	height:1.4vw;
+	float:left;
+	opacity:1;
+	margin-left:0.4vw;
+	margin-right:0.2vw;
+	image-rendering:pixelated;
+}
+
+#weapon-ammo {
+	font-size:1vw;
+	line-height:1.7vw;
+	color:rgba(255,255,255,1);
+}
+
+
+/* -- SPEEDOMETER -- */
+
+#bottom-right-corner-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  filter: drop-shadow(0 0 1.5vw rgba(251, 255, 0, 0.993));
+}
+
+#in-vehicle {
+  float: left;
+  position: relative;
+  margin-right: 14vw;
+  width: 100%;
+  transform:scale(0.8);
+  bottom: -0.8vw;
+}
+
+#speedometer-wrap {
+  font-size: 1vw;
+  vertical-align: top;
+  bottom: 3vw;
+  right: 0vw;
+  position: absolute;
+  text-align: center;
+}
+
+/* -- ENGINE HEALTH -- */
+
+.engine-progress {
+	position: absolute;
+	left: -2.5vw;
+	bottom: 3.5vw;
+	text-align: center;
+	transform: rotate(-42deg);
+  }
+  .engine-barOverflow {
+	position: relative;
+	overflow: hidden;
+	width: 5vw;
+	height: 6vw;
+	margin-bottom: -2vw;
+  }
+  .engine-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 14vw;
+	height: 14vw;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 0.5vw solid rgba(255, 255, 255, 0.3);
+	border-bottom-color: rgba(255, 255, 255, 1);
+	border-top-color: rgba(255, 255, 255, 1);
+  }
+  
+  .small-engine-icon {
+	position: absolute;
+	background: url("../images/icons/icon-small-engine.png") center center
+	  no-repeat;
+	background-size: cover;
+	width: 1vw;
+	height: 1vw;
+	opacity: 1;
+	bottom: -3.5vw;
+	transform: rotate(42deg);
+  }
+  
+  .engine-text {
+	position: absolute;
+	top: -0.5vw;
+	right: -2.2vw;
+	transform: rotate(-8deg);
+  }
+  
+  #speedometer {
+	position: absolute;
+	bottom: 4.5vw;
+	right: 1vw;
+	width: 16vw;
+	height: 8vw;
+	float: left;
+	
+  }
+  
+  #nospeed {
+	font-size: 3.5vw;
+	line-height: 4vw;
+	font-weight: 600;
+	letter-spacing: 0.03vw;
+	color: rgba(255, 255, 255, 0.137);
+	transform: skewY(-5deg);
+  }
+  
+  #speed {
+	font-size: 3.5vw;
+	line-height: 4vw;
+	font-weight: 600;
+	letter-spacing: 0.03vw;
+	color: rgba(255, 255, 255, 1);
+	transform: skewY(-10deg);
+  }
+  
+  #kmh {
+	font-size: 1.2vw;
+	line-height: 1vw;
+	letter-spacing: 0.03vw;
+	color: rgba(255, 255, 255, 0.4);
+	transform: skewY(-5deg);
+  }
+  
+  #speedometer svg {
+	height: 150%;
+	width: 100%;
+	fill: none;
+	stroke: rgb(30, 210, 255);
+	stroke-width: 10;
+  }
+  
+  /* -- FUEL -- */
+  
+  .fuel-progress {
+	position: absolute;
+	right: 0.3vw;
+	bottom: 1.2vw;
+	text-align: center;
+	transform: scaleX(-1) rotate(-38deg);
+  }
+  .fuel-barOverflow {
+	position: relative;
+	overflow: hidden;
+	width: 7vw;
+	height: 8vw;
+  }
+  .fuel-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15vw;
+	height: 15vw;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 0.5vw solid rgba(255, 255, 255, 0.1);
+	border-bottom-color: rgb(220, 35, 35);
+	border-right-color: rgb(220, 35, 35);
+	
+  }
+  
+  .fuel-icon {
+	font-size: 1vw;
+	font-weight: 400;
+	line-height: 1.1vw;
+	transform: scaleX(-1) rotate(-37deg);
+	color: rgb(220, 35, 35);
+	position: absolute;
+	bottom: -1.85vw;
+	left: 0.15vw;
+  }
+  
+  .fuel {
+	position: absolute;
+	top: -0.5vw;
+	right: -2vw;
+	visibility: hidden;
+  }
+  
+  #vehicle-keybindings {
+	width: 7vw;
+	vertical-align: top;
+	bottom: 0vw;
+	right: 6vw;
+	position: absolute;
+	text-align: center;
+  }
+  
+  table.vehicle-table {
+	width: 100%;
+  }
+  
+  #autopilot-icon-off {
+	background: url("../images/icons/icon-autopilot-off.png") center center
+	  no-repeat;
+	background-size: cover;
+	width: 1.3vw;
+	height: 1.3vw;
+	opacity: 0.5;
+  }
+  
+  #autopilot-icon-on {
+	background: url("../images/icons/icon-autopilot-on.png") center center
+	  no-repeat;
+	background-size: cover;
+	width: 1.3vw;
+	height: 1.3vw;
+	opacity: 1;
+  }
+  
+  #autopilot-letter {
+	width: 1.4vw;
+	height: 1.4vw;
+	font-size: 0.8vw;
+	line-height: 1.1vw;
+	font-weight: 600;
+	border-radius: 0%;
+	color: rgba(255, 255, 255, 1);
+	border: solid 0.15vw rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border-radius: 15%;
+  }
+  
+  #carkey-icon-off {
+	background: url("../images/icons/icon-carkey-off.png") center center no-repeat;
+	background-size: cover;
+	width: 1.3vw;
+	height: 1.3vw;
+	opacity: 0.5;
+  }
+  
+  #carkey-icon-on {
+	background: url("../images/icons/icon-carkey-on.png") center center no-repeat;
+	background-size: cover;
+	width: 1.3vw;
+	height: 1.3vw;
+	opacity: 1;
+  }
+  
+  #carkey-letter {
+	width: 1.4vw;
+	height: 1.4vw;
+	font-size: 0.8vw;
+	line-height: 1.1vw;
+	font-weight: 600;
+	border-radius: 0%;
+	color: rgba(255, 255, 255, 1);
+	border: solid 0.15vw rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border-radius: 15%;
+  }
+  
+  #engine-icon-off {
+	background: url("../images/icons/icon-engine-off.png") center center no-repeat;
+	background-size: cover;
+	width: 1.3vw;
+	height: 1.3vw;
+	opacity: 0.5;
+  }
+  
+  #engine-icon-on {
+	background: url("../images/icons/icon-engine-on.png") center center no-repeat;
+	background-size: cover;
+	width: 1.3vw;
+	height: 1.3vw;
+	opacity: 1;
+  }
+  
+  #engine-letter {
+	width: 2.4vw;
+	height: 1.4vw;
+	font-size: 0.8vw;
+	line-height: 1.1vw;
+	font-weight: 600;
+	border-radius: 0%;
+	color: rgba(255, 255, 255, 1);
+	border: solid 0.15vw rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border-radius: 15%;
+  }
+  
+  #windows-icon-off {
+	background: url("../images/icons/icon-windows-off.png") center center
+	  no-repeat;
+	background-size: cover;
+	width: 1.3vw;
+	height: 1.3vw;
+	opacity: 0.5;
+  }
+  
+  #windows-icon-on {
+	background: url("../images/icons/icon-windows-on.png") center center no-repeat;
+	background-size: cover;
+	width: 1.3vw;
+	height: 1.3vw;
+	opacity: 1;
+  }
+  
+  #windows-letter {
+	width: 1.4vw;
+	height: 1.4vw;
+	font-size: 0.8vw;
+	line-height: 1.1vw;
+	font-weight: 600;
+	border-radius: 0%;
+	color: rgba(255, 255, 255, 1);
+	border: solid 0.15vw rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border-radius: 15%;
+  }
+  
+  #car-options-icon-off {
+	background: url("../images/icons/icon-car-options-off.png") center center
+	  no-repeat;
+	background-size: cover;
+	width: 1.3vw;
+	height: 1.3vw;
+	opacity: 0.5;
+  }
+  
+  #car-options-icon-on {
+	background: url("../images/icons/icon-car-options-on.png") center center
+	  no-repeat;
+	background-size: cover;
+	width: 1.3vw;
+	height: 1.3vw;
+	opacity: 1;
+  }
+  
+  #car-options-letter {
+	width: 1.4vw;
+	height: 1.4vw;
+	font-size: 0.8vw;
+	line-height: 1.1vw;
+	font-weight: 600;
+	border-radius: 0%;
+	color: rgba(255, 255, 255, 1);
+	border: solid 0.15vw rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border-radius: 15%;
+  }
+
+  #tmda {
+	font-size:1vw;
+	vertical-align: top;
+	transition:0.2s;
+	top:52.0vw;
+	right:0.0vw;
+	position:absolute;
+	color: #fff;
+	text-align:right;
+	transform:scale(0.8);
+}
+
+#tmda-time {
+	font-size:1.5vw;
+	line-height:1.5vw; 
+	font-weight:400;
+	letter-spacing:0.05vw;
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.2);
+}
+#tmda-date {
+	color: rgb(223, 223, 223);
+	font-size:1.5vw;	
+	line-height:1.5vw;
+	font-weight:400;
+	letter-spacing:0.05vw;
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.2);
+}
+
+
+/* -- CASH & BANK -- */
+
+#cash-bank {
+	font-size:1vw;
+	vertical-align: top;
+	transition:0.2s;
+	top:7.0vw;
+	right:0vw;
+	position:absolute;
+	color: var(--secondary-color);
+	text-align:right;
+	transform:scale(0.9);
+}
+
+
+#cash {
+	font-size:1vw;
+	line-height:1.6vw;
+	font-weight:400;
+	letter-spacing:0.05vw;
+	text-shadow: 0 0 0.5vw 0 rgba(0,0,0,0.4);
+	border-right:0.1vw solid rgba(255,255,255,0.1);
+	padding-right:0.5vw;
+	margin-right:0.2vw;
+}
+
+
+#black-money {
+	font-size:1vw;
+	line-height:1.6vw;
+	font-weight:400;
+	letter-spacing:0.05vw;
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.4);
+	border-right:0.1vw solid rgba(255,255,255,0.1);
+	padding-right:0.5vw;
+	margin-right:0.2vw;
+}
+
+
+#bank {
+	font-size:1vw;
+	line-height:1.6vw;
+	font-weight:400;
+	letter-spacing:0.05vw;
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.2);
+	padding-right:0.2vw;
+
+}
+
+#society {
+	font-size:1vw;
+	line-height:1.6vw;
+	font-weight:400;
+	letter-spacing:0.05vw;
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.2);
+}
+
+#cash span, #bank span, #society span {
+	color:var(--primary-color);
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.2);
+	/* filter:drop-shadow(0 0 0.5vw rgba(0,100,0,0.6)); */
+}
+
+#black-money span {
+	color:var(--primary-color);
+	text-shadow: 0 0 0.5vw rgba(0,0,0,0.2);
+	/* filter:drop-shadow(0 0 0.5vw rgba(0,100,0,0.6)); */
+}
